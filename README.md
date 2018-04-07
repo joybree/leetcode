@@ -1,3 +1,4 @@
 # leetcode
 
-leet code practice
+## 1/789
+1. Two Sum 
