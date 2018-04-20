@@ -4,7 +4,7 @@ class Solution:
         :type s: str
         :rtype: int
         """
-        
+
         substring = []
         substring_tmp = []
         last_len  = 0
@@ -19,8 +19,9 @@ class Solution:
                     last_len = len(substring)
                 #print(substring.index(s[i]))
                 idx = substring.index(s[i])
-                substring_tmp.extend(substring[idx+1:])               
-                substring = []
+                #substring_tmp.extend(substring[idx+1:]) 
+                substring_tmp = substring[idx+1:]              
+                del substring 
                 substring.extend(substring_tmp)
                 if i != len(s)-1:
                     substring.append(s[i])
@@ -30,6 +31,7 @@ class Solution:
        
         return max(len(substring),last_len)
 
+   
 
 if __name__ == "__main__":
     s1 = Solution()
